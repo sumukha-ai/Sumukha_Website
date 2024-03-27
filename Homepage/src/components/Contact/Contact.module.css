@@ -1,0 +1,103 @@
+@import "../../vars.css";
+
+.container{
+    color: var(--color-text);
+    margin-top: 100px;
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    padding: 58px 10%;
+    gap: 10px;
+}
+
+
+
+.text h2{
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 4px;
+
+}
+
+.text p {
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+.news{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.news p {
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.container input{
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+
+
+.links{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+    gap: 30px;
+    justify-content: space-evenly;
+}
+
+.link{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.link a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+}
+.copyright{
+    display: flex;
+    font-weight: 100;
+    font-size: 19px;
+    padding-top: 0;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 20px;
+    text-align: center;
+    justify-content: center;
+    padding-right: 50px;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+
+}
+.link img{
+    width: 50px;
+}
+
+@media screen and (max-width: 830px) {
+    .container{
+        flex-direction: column;
+        gap: 23px;
+    }
+    .text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .links{
+        align-items: center;
+    }
+}
