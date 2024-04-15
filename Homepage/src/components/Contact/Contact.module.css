@@ -81,7 +81,12 @@
     padding-right: 50px;
     background-color: var(--color-primary);
     color: var(--color-text);
+}
 
+.tos a{
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 19px;
 }
 .link img{
     width: 50px;
@@ -99,5 +104,10 @@
     }
     .links{
         align-items: center;
+    }
+
+    .copyright{
+        display: flex;
+        flex-direction: column;
     }
 }

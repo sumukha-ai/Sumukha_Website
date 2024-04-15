@@ -1,0 +1,22 @@
+@import "../../vars.css";
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--color-text);
+    line-height: 24px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.container h1{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.container h2{
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

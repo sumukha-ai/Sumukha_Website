@@ -1,11 +1,8 @@
-import { Contact } from "./components/Contact/Contact";
-import styles from "./App.module.css";
-import { Hero } from "./components/Hero/Hero";
-import { Navbar } from "./components/Navbar/Navbar";
-import { Integrations } from "./components/Integrations/Integrations";
-import { About } from "./components/About/About";
-import { Features } from "./components/Features/Features";
-import { Product } from "./components/Product/Product";
+import styles from './App.module.css'
+import { BrowserRouter,Route,Routes  } from 'react-router-dom'
+import { Homepage } from './Pages/Homepage'
+import { TOS } from './components/TOS/TOS'
+import { Privacy } from './components/Privacy/Privacy'
 
 
 
@@ -13,13 +10,13 @@ import { Product } from "./components/Product/Product";
 function App() {
   return (
     <div className={styles.App} >
-      <Navbar />
-      <Hero /> 
-      < About id="about"/>
-      < Features/>
-      <Integrations/>
-      <Product/>
-      <Contact />
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Homepage/>} />
+        <Route path="/terms-of-services" element={<TOS/>} />
+        <Route path="/privacy-policy" element ={<Privacy/>} />
+      </Routes>
+      </BrowserRouter>
     </div>
   )
 }

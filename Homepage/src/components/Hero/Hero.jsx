@@ -4,6 +4,8 @@ import { getImageUrl } from "../../utils";
 import styles from "./Hero.module.css";
 
 export const Hero = () => {
+
+
     useEffect(() => {
         // Facebook SDK initialization script
         window.fbAsyncInit = function() {
@@ -25,7 +27,12 @@ export const Hero = () => {
         // Facebook login function
         window.launchWhatsAppSignup = function() {
             // Launch Facebook login
+            console.log("FB")
+            console.log(FB)
+            console.log("FB")
             FB.login(function (response) {
+                console.log("#############START");
+                console.log(response.authResponse);
                 if (response.authResponse) {
                     const accessToken = response.authResponse.accessToken;
                     // Use this token to call the debug_token API and get the shared WABA's ID
@@ -51,6 +58,10 @@ export const Hero = () => {
             cursor.style.display = 'none';
         }
     };
+
+    const dummy = () =>{
+        console
+    }
 
     return (
         <section className={styles.container} id="home">
