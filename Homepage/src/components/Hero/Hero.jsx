@@ -7,14 +7,21 @@ export const Hero = () => {
 
 
     useEffect(() => {
+        try {
         // Facebook SDK initialization script
         window.fbAsyncInit = function() {
             FB.init({
                 appId: '383782301101923',
+                autoLogAppEvents: true,
                 xfbml: true,
-                version: 'v19.0'
+                version: 'v18.0'
             });
         };
+    } catch (error){
+        console.log("Amrutha")
+        console.error('An error occurred:', error);
+        console.log("Amrutha")
+    }
         // Load the SDK asynchronously
         (function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
@@ -59,9 +66,7 @@ export const Hero = () => {
         }
     };
 
-    const dummy = () =>{
-        console
-    }
+ 
 
     return (
         <section className={styles.container} id="home">
